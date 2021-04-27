@@ -1,0 +1,55 @@
+$position: absolute fixed relative static;
+
+@each $style in $position {
+    .position-#{$style} {
+        position: #{$style};
+    }
+}
+
+// top
+$top: 50;
+
+@for $i from 1 through $top {
+    .top-#{$i} {
+        top: #{$i}px;
+    }
+    .top-minu-#{$i} {
+        top: -#{$i}px;
+    }
+}
+
+// bottom
+$bottom: 50;
+
+@for $i from 1 through $bottom {
+    .bottom-#{$i} {
+        bottom: #{$i}px;
+    }
+    .bottom-minu-#{$i} {
+        bottom: -#{$i}px;
+    }
+}
+
+// left
+$left: 50;
+
+@for $i from 1 through $left {
+    .left-#{$i} {
+        left: #{$i}px;
+    }
+    .left-minu-#{$i} {
+        left: -#{$i}px;
+    }
+}
+
+// right
+$right: 50;
+
+@for $i from 1 through $right {
+    .right-#{$i} {
+        right: #{$i}px;
+    }
+    .right-minu-#{$i} {
+        right: -#{$i}px;
+    }
+}

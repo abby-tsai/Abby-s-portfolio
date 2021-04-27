@@ -1,0 +1,61 @@
+.list-area > ul {
+    font-size: $font-size-0;
+}
+
+.list-area > ul > li {
+    display: $d-inline-block;
+    vertical-align: $v-top;
+    // margin: 0 25px 40px 0;
+}
+
+$list-th-items: 10;
+
+@for $i from 2 through $list-th-items {
+    .list-area.list-#{$i}th > ul > li {
+        width: calc(100% / #{$i});
+    }
+}
+
+@media (max-width: $screen-xl-max) {
+    %width-100-5 {
+        width: calc(100% / 5);
+    }
+    @for $i from 9 through $list-th-items {
+        .list-area.list-#{$i}th > ul > li {
+            @extend %width-100-5;
+        }
+    }
+}
+
+@media (max-width: $screen-lg-max) {
+    %width-100-4 {
+        width: calc(100% / 4);
+    }
+    @for $i from 7 through $list-th-items {
+        .list-area.list-#{$i}th > ul > li {
+            @extend %width-100-4;
+        }
+    }
+}
+
+@media (max-width: $screen-md-max) {
+    %width-100-3 {
+        width: calc(100% / 3);
+    }
+    @for $i from 5 through $list-th-items {
+        .list-area.list-#{$i}th > ul > li {
+            @extend %width-100-3;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    %width-100-2 {
+        width: calc(100% / 2);
+    }
+    @for $i from 3 through $list-th-items {
+        .list-area.list-#{$i}th > ul > li {
+            @extend %width-100-2;
+        }
+    }
+}

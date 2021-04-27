@@ -1,0 +1,401 @@
+//
+// display
+//
+@mixin display($display) {
+    .d-#{$display} {
+        display: $display;
+    }
+}
+
+@mixin class-display($class, $display) {
+    .d-#{$class}-#{$display} {
+        display: $display;
+    }
+}
+
+@mixin all-display() {
+    @include display($d-none);
+    @include display($d-block);
+    @include display($d-flex);
+    @include display($d-inline);
+    @include display($d-inline-block);
+    @include display($d-table);
+    @include display($d-table-cell);
+}
+
+@mixin all-class-display($class) {
+    @include class-display($class, $d-none);
+    @include class-display($class, $d-block);
+    @include class-display($class, $d-flex);
+    @include class-display($class, $d-inline);
+    @include class-display($class, $d-inline-block);
+    @include class-display($class, $d-table);
+    @include class-display($class, $d-table-cell);
+}
+
+//
+// justify-content
+//
+@mixin jc($content) {
+    .justify-content-#{$content} {
+        justify-content: $content;
+    }
+}
+
+@mixin class-jc($class, $content) {
+    .justify-content-#{$class}-#{$content} {
+        justify-content: $content;
+    }
+}
+
+@mixin all-jc() {
+    @include jc($jc-start);
+    @include jc($jc-end);
+    @include jc($jc-center);
+    @include jc($jc-between);
+    @include jc($jc-around);
+}
+
+@mixin all-class-jc($class) {
+    @include class-jc($class, $jc-start);
+    @include class-jc($class, $jc-end);
+    @include class-jc($class, $jc-center);
+    @include class-jc($class, $jc-between);
+    @include class-jc($class, $jc-around);
+}
+
+//
+// align-items
+//
+@mixin ai($items) {
+    .align-items-#{$items} {
+        align-items: $items;
+    }
+}
+
+@mixin class-ai($class, $items) {
+    .align-items-#{$class}-#{$items} {
+        align-items: $items;
+    }
+}
+
+@mixin all-ai() {
+    @include ai($ai-start);
+    @include ai($ai-end);
+    @include ai($ai-center);
+    @include ai($ai-baseline);
+    @include ai($ai-stretch);
+}
+
+@mixin all-class-ai($class) {
+    @include class-ai($class, $ai-start);
+    @include class-ai($class, $ai-end);
+    @include class-ai($class, $ai-center);
+    @include class-ai($class, $ai-baseline);
+    @include class-ai($class, $ai-stretch);
+}
+
+//
+// align-content
+//
+@mixin ac($content) {
+    .align-content-#{$content} {
+        align-content: $content;
+    }
+}
+
+@mixin class-ac($class, $content) {
+    .align-content-#{$class}-#{$content} {
+        align-content: $content;
+    }
+}
+
+@mixin all-ac() {
+    @include ac($ac-start);
+    @include ac($ac-end);
+    @include ac($ac-center);
+    @include ac($ac-between);
+    @include ac($ac-around);
+    @include ac($ac-stretch);
+}
+
+@mixin all-class-ac($class) {
+    @include class-ac($class, $ac-start);
+    @include class-ac($class, $ac-end);
+    @include class-ac($class, $ac-center);
+    @include class-ac($class, $ac-between);
+    @include class-ac($class, $ac-around);
+    @include class-ac($class, $ac-stretch);
+}
+
+//
+// align-self
+//
+@mixin as($self) {
+    .align-self-#{$self} {
+        align-self: $self;
+    }
+}
+
+@mixin class-as($class, $self) {
+    .align-self-#{$class}-#{$self} {
+        align-self: $self;
+    }
+}
+
+@mixin all-as() {
+    @include as($as-auto);
+    @include as($as-start);
+    @include as($as-end);
+    @include as($as-center);
+    @include as($as-baseline);
+    @include as($as-stretch);
+}
+
+@mixin all-class-as($class) {
+    @include class-as($class, $as-auto);
+    @include class-as($class, $as-start);
+    @include class-as($class, $as-end);
+    @include class-as($class, $as-center);
+    @include class-as($class, $as-baseline);
+    @include class-as($class, $as-stretch);
+}
+
+//
+// flex direction
+//
+@mixin fd($direction) {
+    .flex-#{$direction} {
+        flex-direction: $direction;
+    }
+}
+
+@mixin class-fd($class, $direction) {
+    .flex-#{$class}-#{$direction} {
+        flex-direction: $direction;
+    }
+}
+
+@mixin all-fd() {
+    @include fd($flex-row);
+    @include fd($flex-column);
+    @include fd($flex-row-reverse);
+    @include fd($flex-column-reverse);
+}
+
+@mixin all-class-fd($class) {
+    @include class-fd($class, $flex-row);
+    @include class-fd($class, $flex-column);
+    @include class-fd($class, $flex-row-reverse);
+    @include class-fd($class, $flex-column-reverse);
+}
+
+//
+// flex wrap
+//
+@mixin fw($wrap) {
+    .flex-#{$wrap} {
+        flex-wrap: $wrap;
+    }
+}
+
+@mixin class-fw($class, $wrap) {
+    .flex-#{$class}-#{$wrap} {
+        flex-wrap: $wrap;
+    }
+}
+
+@mixin all-fw() {
+    @include fw($flex-wrap);
+    @include fw($flex-nowrap);
+    @include fw($flex-wrap-reverse);
+}
+
+@mixin all-class-fw($class) {
+    @include class-fw($class, $flex-wrap);
+    @include class-fw($class, $flex-nowrap);
+    @include class-fw($class, $flex-wrap-reverse);
+}
+
+//
+// flex fill
+//
+@mixin ff($fill) {
+    .flex-fill {
+        flex: $fill;
+    }
+}
+
+@mixin class-ff($class, $fill) {
+    .flex-#{$class}-fill {
+        flex: $fill;
+    }
+}
+
+@mixin all-ff() {
+    @include ff($flex-fill);
+}
+
+@mixin all-class-ff($class) {
+    @include class-ff($class, $flex-fill);
+}
+
+//
+// flex grow
+//
+@mixin fg($grow) {
+    .flex-grow-#{$grow} {
+        flex-grow: $grow;
+    }
+}
+
+@mixin class-fg($class, $grow) {
+    .flex-#{$class}-grow-#{$grow} {
+        flex-grow: $grow;
+    }
+}
+
+@mixin all-fg() {
+    @include fg($flex-grow-0);
+    @include fg($flex-grow-1);
+}
+
+@mixin all-class-fg($class) {
+    @include class-fg($class, $flex-grow-0);
+    @include class-fg($class, $flex-grow-1);
+}
+
+//
+// flex shrink
+//
+@mixin fs($shrink) {
+    .flex-shrink-#{$shrink} {
+        flex-shrink: $shrink;
+    }
+}
+
+@mixin class-fs($class, $shrink) {
+    .flex-#{$class}-shrink-#{$shrink} {
+        flex-shrink: $shrink;
+    }
+}
+
+@mixin all-fs() {
+    @include fs($flex-shrink-0);
+    @include fs($flex-shrink-1);
+}
+
+@mixin all-class-fs($class) {
+    @include class-fs($class, $flex-shrink-0);
+    @include class-fs($class, $flex-shrink-1);
+}
+
+@mixin all-as() {
+    @include as($as-auto);
+    @include as($as-start);
+    @include as($as-end);
+    @include as($as-center);
+    @include as($as-baseline);
+    @include as($as-stretch);
+}
+
+@mixin all-class-as($class) {
+    @include class-as($class, $as-auto);
+    @include class-as($class, $as-start);
+    @include class-as($class, $as-end);
+    @include class-as($class, $as-center);
+    @include class-as($class, $as-baseline);
+    @include class-as($class, $as-stretch);
+}
+
+//
+// 導入custom.css
+//
+@include all-display();
+@include all-jc();
+@include all-ai();
+@include all-ac();
+@include all-as();
+@include all-fd();
+@include all-fw();
+@include all-ff();
+@include all-fg();
+@include all-fs();
+
+@media (min-width: $screen-sm-min) {
+    @include all-class-display(sm);
+    @include all-class-jc(sm);
+    @include all-class-ai(sm);
+    @include all-class-ac(sm);
+    @include all-class-as(sm);
+    @include all-class-fd(sm);
+    @include all-class-fw(sm);
+    @include all-class-ff(sm);
+    @include all-class-fg(sm);
+    @include all-class-fs(sm);
+}
+
+@media (min-width: $screen-md-min) {
+    @include all-class-display(md);
+    @include all-class-jc(md);
+    @include all-class-ai(md);
+    @include all-class-ac(md);
+    @include all-class-as(md);
+    @include all-class-fd(md);
+    @include all-class-fw(md);
+    @include all-class-ff(md);
+    @include all-class-fg(md);
+    @include all-class-fs(md);
+}
+
+@media (min-width: $screen-lg-min) {
+    @include all-class-display(lg);
+    @include all-class-jc(lg);
+    @include all-class-ai(lg);
+    @include all-class-ac(lg);
+    @include all-class-as(lg);
+    @include all-class-fd(lg);
+    @include all-class-fw(lg);
+    @include all-class-ff(lg);
+    @include all-class-fg(lg);
+    @include all-class-fs(lg);
+}
+
+@media (min-width: $screen-xl-min) {
+    @include all-class-display(xl);
+    @include all-class-jc(xl);
+    @include all-class-ai(xl);
+    @include all-class-ac(xl);
+    @include all-class-as(xl);
+    @include all-class-fd(xl);
+    @include all-class-fw(xl);
+    @include all-class-ff(xl);
+    @include all-class-fg(xl);
+    @include all-class-fs(xl);
+}
+
+@media (min-width: $screen-xxl-min) {
+    @include all-class-display(xxl);
+    @include all-class-jc(xxl);
+    @include all-class-ai(xxl);
+    @include all-class-ac(xxl);
+    @include all-class-as(xxl);
+    @include all-class-fd(xxl);
+    @include all-class-fw(xxl);
+    @include all-class-ff(xxl);
+    @include all-class-fg(xxl);
+    @include all-class-fs(xxl);
+}
+
+@media (min-width: $screen-xxxl-min) {
+    @include all-class-display(xxxl);
+    @include all-class-jc(xxxl);
+    @include all-class-ai(xxxl);
+    @include all-class-ac(xxxl);
+    @include all-class-as(xxxl);
+    @include all-class-fd(xxxl);
+    @include all-class-fw(xxxl);
+    @include all-class-ff(xxxl);
+    @include all-class-fg(xxxl);
+    @include all-class-fs(xxxl);
+}

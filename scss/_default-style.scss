@@ -1,0 +1,237 @@
+// Basic settings
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    margin: $margin-none;
+    padding: $padding-none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body,
+*:hover,
+*:focus,
+*:active {
+    cursor: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+button,
+input {
+    font-family: $font-family-base;
+}
+
+body,
+p {
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small {
+    line-height: $line-height-base;
+}
+
+p {
+    color: $black;
+}
+
+img {
+    max-width: 100%;
+    height: $auto;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+button,
+.btn,
+a {
+    cursor: pointer;
+}
+
+// clearfix
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+.clearfix {
+    @include clearfix();
+}
+
+// width height 100v
+.w-100vw {
+    width: $w-100vw;
+}
+.h-100vh {
+    height: $h-100vh;
+}
+
+@mixin class-height($class) {
+    .h-#{$class}-100vh {
+        height: $h-100vh;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    @include class-height(sm);
+}
+
+@media (min-width: $screen-md-min) {
+    @include class-height(md);
+}
+
+@media (min-width: $screen-lg-min) {
+    @include class-height(lg);
+}
+
+@media (min-width: $screen-xl-min) {
+    @include class-height(xl);
+}
+
+@media (min-width: $screen-xxl-min) {
+    @include class-height(xxl);
+}
+
+@media (min-width: $screen-xxxl-min) {
+    @include class-height(xxxl);
+}
+
+// list
+
+@mixin list-unstyled {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+ul,
+.list-unstyled {
+    @include list-unstyled;
+}
+
+// vertical align
+
+@mixin vertical($align) {
+    .align-#{$align} {
+        vertical-align: $align;
+    }
+}
+
+@mixin all-vertical() {
+    @include vertical($v-top);
+    @include vertical($v-middle);
+    @include vertical($v-bottom);
+    @include vertical($v-baseline);
+    @include vertical($v-text-bottom);
+    @include vertical($v-text-top);
+}
+
+@include all-vertical();
+
+// layout
+
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layout.light-1 {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.layout.light-2 {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.layout.light-3 {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.layout.light-4 {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.layout.light-5 {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.layout.light-6 {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.layout.light-7 {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.layout.light-8 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.layout.light-9 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.layout.dark-1 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.layout.dark-2 {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.layout.dark-3 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.layout.dark-4 {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.layout.dark-5 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.layout.dark-6 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.layout.dark-7 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.layout.dark-8 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.layout.dark-9 {
+    background-color: rgba(0, 0, 0, 0.9);
+}

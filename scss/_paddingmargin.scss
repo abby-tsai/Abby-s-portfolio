@@ -1,0 +1,172 @@
+@mixin make-paddings($padding) {
+    .p-#{$padding} {
+        padding: $padding * 1rem;
+    }
+    .pl-#{$padding} {
+        padding-left: $padding * 1rem;
+    }
+    .pr-#{$padding} {
+        padding-right: $padding * 1rem;
+    }
+    .pt-#{$padding} {
+        padding-top: $padding * 1rem;
+    }
+    .pb-#{$padding} {
+        padding-bottom: $padding * 1rem;
+    }
+    .py-#{$padding} {
+        @extend .pt-#{$padding};
+        @extend .pb-#{$padding};
+    }
+    .px-#{$padding} {
+        @extend .pl-#{$padding};
+        @extend .pr-#{$padding};
+    }
+}
+
+@mixin make-class-paddings($class, $padding) {
+    .p-#{$class}-#{$padding} {
+        padding: $padding * 1rem;
+    }
+    .pl-#{$class}-#{$padding} {
+        padding-left: $padding * 1rem;
+    }
+    .pr-#{$class}-#{$padding} {
+        padding-right: $padding * 1rem;
+    }
+    .pt-#{$class}-#{$padding} {
+        padding-top: $padding * 1rem;
+    }
+    .pb-#{$class}-#{$padding} {
+        padding-bottom: $padding * 1rem;
+    }
+    .py-#{$class}-#{$padding} {
+        @extend .pt-#{$class}-#{$padding};
+        @extend .pb-#{$class}-#{$padding};
+    }
+    .px-#{$class}-#{$padding} {
+        @extend .pl-#{$class}-#{$padding};
+        @extend .pr-#{$class}-#{$padding};
+    }
+}
+
+@mixin make-margins($margin) {
+    .m-#{$margin} {
+        margin: $margin * 1rem;
+    }
+    .ml-#{$margin} {
+        margin-left: $margin * 1rem;
+    }
+    .mr-#{$margin} {
+        margin-right: $margin * 1rem;
+    }
+    .mt-#{$margin} {
+        margin-top: $margin * 1rem;
+    }
+    .mb-#{$margin} {
+        margin-bottom: $margin * 1rem;
+    }
+    .my-#{$margin} {
+        @extend .mt-#{$margin};
+        @extend .mb-#{$margin};
+    }
+    .mx-#{$margin} {
+        @extend .ml-#{$margin};
+        @extend .mr-#{$margin};
+    }
+}
+
+@mixin make-class-margins($class, $margin) {
+    .m-#{$class}-#{$margin} {
+        margin: $margin * 1rem;
+    }
+    .ml-#{$class}-#{$margin} {
+        margin-left: $margin * 1rem;
+    }
+    .mr-#{$class}-#{$margin} {
+        margin-right: $margin * 1rem;
+    }
+    .mt-#{$class}-#{$margin} {
+        margin-top: $margin * 1rem;
+    }
+    .mb-#{$class}-#{$margin} {
+        margin-bottom: $margin * 1rem;
+    }
+    .my-#{$class}-#{$margin} {
+        @extend .mt-#{$class}-#{$margin};
+        @extend .mb-#{$class}-#{$margin};
+    }
+    .mx-#{$class}-#{$margin} {
+        @extend .ml-#{$class}-#{$margin};
+        @extend .mr-#{$class}-#{$margin};
+    }
+}
+
+@mixin make-all-paddings() {
+    @include make-paddings($padding-none);
+    @include make-paddings($padding-sm);
+    @include make-paddings($padding-base);
+    @include make-paddings($padding-lg);
+    @include make-paddings($padding-xl);
+    @include make-paddings($padding-xxl);
+}
+
+@mixin make-all-class-paddings($class) {
+    @include make-class-paddings($class, $padding-none);
+    @include make-class-paddings($class, $padding-sm);
+    @include make-class-paddings($class, $padding-base);
+    @include make-class-paddings($class, $padding-lg);
+    @include make-class-paddings($class, $padding-xl);
+    @include make-class-paddings($class, $padding-xxl);
+}
+
+@mixin make-all-margins() {
+    @include make-margins($margin-none);
+    @include make-margins($margin-sm);
+    @include make-margins($margin-base);
+    @include make-margins($margin-lg);
+    @include make-margins($margin-xl);
+    @include make-margins($margin-xxl);
+}
+
+@mixin make-all-class-margins($class) {
+    @include make-class-margins($class, $margin-none);
+    @include make-class-margins($class, $margin-sm);
+    @include make-class-margins($class, $margin-base);
+    @include make-class-margins($class, $margin-lg);
+    @include make-class-margins($class, $margin-xl);
+    @include make-class-margins($class, $margin-xxl);
+}
+
+@include make-all-paddings();
+@include make-all-margins();
+
+@media (min-width: $screen-sm-min) {
+    @include make-all-class-paddings(sm);
+    @include make-all-class-margins(sm);
+}
+
+@media (min-width: $screen-md-min) {
+    @include make-all-class-paddings(md);
+    @include make-all-class-margins(md);
+}
+
+@media (min-width: $screen-lg-min) {
+    @include make-all-class-paddings(lg);
+    @include make-all-class-margins(lg);
+}
+
+@media (min-width: $screen-xl-min) {
+    @include make-all-class-paddings(xl);
+    @include make-all-class-margins(xl);
+}
+
+@media (min-width: $screen-xxl-min) {
+    @include make-all-class-paddings(xxl);
+    @include make-all-class-margins(xxl);
+}
+
+@media (min-width: $screen-xxxl-min) {
+    @include make-all-class-paddings(xxxl);
+    @include make-all-class-margins(xxxl);
+}

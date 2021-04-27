@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="image/favicon.ico">
+	<title>ABBY</title>
+	<link rel="stylesheet" href="dist/style/custom.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div id="main-wrapper">
+
+		<div class="loader-box">
+			<div class="controller">
+				<ul>
+					<li><a href="#abby" data-scroll>A</a></li>
+					<li class="active"><a href="#home" data-scroll>H</a></li>
+					<li><a href="#works" data-scroll>W</a></li>
+					<li><a href="#case_1" data-scroll>1</a></li>
+					<li><a href="#case_2" data-scroll>2</a></li>
+					<li><a href="#case_3" data-scroll>3</a></li>
+					<li><a href="#case_4" data-scroll>4</a></li>
+					<li><a href="#case_5" data-scroll>5</a></li>
+					<li><a href="#case_6" data-scroll>6</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="music-player">
+
+			<div class="song">來聽聽音樂吧</div>
+
+			<div class="ico-music">
+				<img src="image/home/ico-ukulele.svg" alt="">
+			</div>
+			<div class="now-playing">
+				<div class="play">
+					<button type="button" class="btn-playmusic on active">
+						<i data-feather="volume-2" class="font-size-25"></i>
+					</button>
+					<button type="button" class="btn-playmusic off">
+						<i data-feather="volume-x" class="font-size-25"></i>
+					</button>
+					<audio id="audio" src="music/music-1.mp3"></audio>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper wrapper--3-3">
+
+			<div class="svg-line">
+				<svg xmlns="http://www.w3.org/2000/svg" width="6610.721" height="680.547"
+					viewBox="0 0 6610.721 680.547">
+					<path id="svg-2"
+						d="M10114.023,177.217S10739.2,394.044,12116.891,304.56s2975.355-499.047,2975.355-499.047S16030-411.315,16724.637-339.039"
+						transform="translate(-10113.941 354.072)" fill="none" stroke="#00ffa8" stroke-width="0.5" />
+				</svg>
+			</div>
+
+			<section class="section-block" id="abby">
+				<div class="Wrapper-fluid">
+					<div class="row">
+						<div class="Block--lg-4 Block--md-5 order-md-0 order-1 align-self-center">
+							<div class="skill text-center mb-md-4 mb-2 mt-md-0 mt-2">
+								<ul>
+									<li>HTML</li>
+									<li>CSS / SCSS</li>
+									<li>Bootstrap</li>
+									<li>UI / UX</li>
+								</ul>
+							</div>
+							<div class="text-center pb-md-0 pb-3">
+								<div class="contact-btn">
+									<a href="mailto:diya811125@gmail.com">
+										<span class="icon">
+											<i data-feather="mail" class="font-size-20 position-relative top-4"></i>
+										</span>
+										<span class="text">與我聯絡</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="Block--lg-8 Block--md-7 order-md-1 order-0 position-relative" style="z-index: -1;">
+							<div class="cover-img-block"
+								style="background-image: url(image/about/bg-about.jpg); background-size: cover; background-position: center;">
+
+								<div class="layout dark-3"></div>
+
+								<div class="about-content">
+									<p>
+										大家好，我是蔡欣恬，來自台中。<br>
+										我喜愛前端設計、UI、UX，<br>
+										以及與夥伴討論專案的氛圍。<br>
+										踏入設計和前端這幾年，<br>
+										多數是與我周圍的人和網路學習走來。<br><br><br>
+										我相信合適的設計，適合的夥伴。
+									</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="arrow-btn right">
+					<a href="#home" data-scroll class="color-white">
+						HOME
+						<i data-feather="arrow-right" class="font-size-20 position-relative top-4"></i>
+					</a>
+				</div>
+			</section>
+
+			<section class="section-block" id="home">
+
+				<div class="Wrapper">
+
+					<div class="row h-100vh">
+						<div class="Block--xxl-8 align-self-md-center align-self-lg-flex-end align-self-xl-center">
+
+							<div class="home-left">
+
+								<div class="home-hry tagInput" id="tagInput">
+									<div class="input-group">
+										現在是
+										<span id="MyWeekDisplay" class="letter-spacing-1" onload="showWeek()"></span>
+
+										<span id="MyClockDisplay" class="letter-spacing-1" onload="showTime()"></span>
+										，
+										<br>
+										你的心情如何？
+										<div class="position-relative d-inline-block mx-1">
+											<input class="hidden" type="hidden">
+											<input class="input" type="text">
+											<span class="shineline"></span>
+										</div>
+										: )))
+									</div>
+
+									<div class="response-list">
+										<ul>
+											<li class="text">
+												你好，我是蔡欣恬
+											</li>
+											<li class="text">
+												踏入設計和前端這幾年，很充實，也有很多想法想落實。
+											</li>
+											<li class="text">
+												雖然我還在摸索js，但我會盡力的！
+											</li>
+											<li class="text">
+												希望你還喜歡我的作品集！
+											</li>
+										</ul>
+									</div>
+
+								</div>
+
+								<div class="home-content">
+									<div class="home-title">
+										<h1 class="title">
+											<span class="color-color-base">A</span>BBY's
+											<span class="small">Portfolio</span>
+										</h1>
+									</div>
+									<div class="home-desc">
+										<p>
+											我是一個喜歡嘗試各種新事物的人。<br>
+											<span>
+												(還喜歡唱歌、玩烏克麗麗、動物、看電影、玩遊戲...etc)
+											</span>
+										</p>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="Block--xxl-4 align-self-center d-none d-lg-flex">
+							<div class="home-img">
+								<div data-relative-input="true" id="scene">
+									<img data-depth="0.1" src="image/home/me.png" alt="">
+
+									<img data-depth="0.6" src="image/home/movingdots/5.png" class="d-1" alt="">
+									<img data-depth="0.5" src="image/home/movingdots/3.png" class="d-2" alt="">
+									<img data-depth="0.4" src="image/home/movingdots/2.png" class="d-3" alt="">
+									<img data-depth="0.3" src="image/home/movingdots/q-1.png" class="q-1" alt="">
+									<img data-depth="0.2" src="image/home/movingdots/q-2.png" class="q-2" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="arrow-btn left">
+					<a href="#abby" data-scroll class="color-black">
+						<i data-feather="arrow-left" class="font-size-20 position-relative top-4"></i>
+						ABOUT
+					</a>
+				</div>
+				<div class="arrow-btn right">
+					<a href="#works" data-scroll class="color-black">
+						WORKS
+						<i data-feather="arrow-right" class="font-size-20 position-relative top-4"></i>
+					</a>
+				</div>
+			</section>
+
+			<section class="section-block" id="works">
+				<div class="Wrapper">
+					<div class="row h-md-100vh pt-5 pt-md-0">
+						<div class="Block--xxl-2 Block--md-4 Block--6 align-self-flex-start">
+
+							<div class="case">
+								<div class="case-unit">
+									<h2 class="header text-center">雅敦建設</h2>
+									<div class="imgbox" style="background-image: url(image/work/bg-case-1.jpg);">
+										<span class="bigfont bottom-minu-28 right-minu-10">archi</span>
+									</div>
+									<h4 class="subHeader text-center">
+										客戶服務 + 企業形象
+									</h4>
+								</div>
+								<a href="#case_1" data-scroll class="coverhref"></a>
+							</div>
+
+						</div>
+						<div class="Block--xxl-2 Block--md-4 Block--6 align-self-flex-end">
+
+							<div class="case">
+								<div class="case-unit">
+									<h2 class="header text-center">Aiermei<br>艾爾鎂</h2>
+									<div class="imgbox" style="background-image: url(image/work/bg-case-2.jpg);">
+										<span class="bigfont bottom-minu-28 left-minu-10">SHOP</span>
+									</div>
+									<h4 class="subHeader text-center">
+										購物電商 + 企業形象
+									</h4>
+								</div>
+								<a href="#case_2" data-scroll class="coverhref"></a>
+							</div>
+
+						</div>
+						<div class="Block--xxl-2 Block--md-4 Block--6 align-self-center">
+
+							<div class="case">
+								<div class="case-unit">
+									<h2 class="header text-center">奎比克動能系統</h2>
+									<div class="imgbox" style="background-image: url(image/work/bg-case-3.jpg);">
+										<span class="bigfont top-minu-43 left-minu-10">energy</span>
+									</div>
+									<h4 class="subHeader text-center">
+										舞台系統 + 企業形象
+									</h4>
+								</div>
+								<a href="#case_3" data-scroll class="coverhref"></a>
+							</div>
+
+						</div>
+						<div class="Block--xxl-2 Block--md-4 Block--6 align-self-flex-start">
+
+							<div class="case">
+								<div class="case-unit">
+									<h2 class="header text-center">MASAの<br>料理ABC</h2>
+									<div class="imgbox" style="background-image: url(image/work/bg-case-4.jpg);">
+										<span class="bigfont bottom-minu-28 right-minu-10">food</span>
+									</div>
+									<h4 class="subHeader text-center">
+										企業形象
+									</h4>
+								</div>
+								<a href="#case_4" data-scroll class="coverhref"></a>
+							</div>
+
+						</div>
+						<div class="Block--xxl-2 Block--md-4 Block--6 align-self-flex-end">
+
+							<div class="case">
+								<div class="case-unit">
+									<h2 class="header text-center">Hi A Day</h2>
+									<div class="imgbox" style="background-image: url(image/work/bg-case-5.jpg);">
+										<span class="bigfont bottom-minu-28 left-minu-10">SHOP</span>
+									</div>
+									<h4 class="subHeader text-center">
+										韓流電商 + 文化分享
+									</h4>
+								</div>
+								<a href="#case_5" data-scroll class="coverhref"></a>
+							</div>
+
+						</div>
+						<div class="Block--xxl-2 Block--md-4 Block--6 align-self-center">
+
+							<div class="case">
+								<div class="case-unit">
+									<h2 class="header text-center">TALI 大秝設計</h2>
+									<div class="imgbox" style="background-image: url(image/work/bg-case-6.jpg);">
+										<span class="bigfont top-minu-43 left-minu-10">archi</span>
+										<h4 class="subHeader text-center">
+											企業形象
+										</h4>
+									</div>
+								</div>
+								<a href="#case_6" data-scroll class="coverhref"></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="arrow-btn left">
+					<a href="#home" data-scroll class="color-black">
+						<i data-feather="arrow-left" class="font-size-20 position-relative top-4"></i>
+						HOME
+					</a>
+				</div>
+			</section>
+
+			<section class="section-block" id="case_1">
+				<div class="Wrapper">
+
+					<div class="row">
+						<div class="Block--lg-5 position-relative">
+							<span class="back-towork">
+								<a href="#works" data-scroll>Back To Work</a>
+							</span>
+							<div class="case-single-content">
+								<div class="d-block d-lg-flex flex-column h-lg-100vh">
+									<div class="Block-column--6 align-items-flex-end">
+										<h3 class="title">
+											雅敦建設
+										</h3>
+									</div>
+									<div class="Block-column--6 flex-column">
+										<div class="desc mb-2">
+											我們任何建案，就能感受到小細節與大格局的
+											「用心」與「實在」<br><br>
+											雅敦建設針對現代潮流與創新思維<br>
+											結合台灣社會現況及發展的新型態演化<br>
+											希望能帶給更多住戶更多的感動。
+										</div>
+										<div class="sub-desc">
+											<ul>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Function
+													</span>
+													客戶服務 + 企業形象
+												</li>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Link
+													</span>
+													<a href="https://www.yatiarch.com.tw/" target="_blank">
+														www.yatiarch.com.tw
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Block--lg-7 position-relative">
+							<span class="tip-scroll">
+								Scroll
+							</span>
+							<div class="case-single-img">
+								<ul class="m-0">
+									<li class="text-center">
+										<img src="image/work/case-1--0.jpg" alt="">
+									</li>
+									<li>
+										<img src="image/work/case-1--1.jpg" alt="">
+									</li>
+									<li class="text-right">
+										<img src="image/work/case-1--2.jpg" alt="">
+									</li>
+									<li class="text-center">
+										<img src="image/work/case-1--3.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- <div class="arrow-btn right">
+					<a href="#case_2" data-scroll class="color-black">
+						Hi A Day
+						<i data-feather="arrow-right" class="font-size-20 position-relative top-4"></i>
+					</a>
+				</div> -->
+			</section>
+
+			<section class="section-block" id="case_2">
+
+				<div class="Wrapper">
+
+					<div class="row">
+						<div class="Block--lg-5 position-relative">
+							<span class="back-towork">
+								<a href="#works" data-scroll>Back To Work</a>
+							</span>
+							<div class="case-single-content">
+								<div class="d-block d-lg-flex flex-column h-lg-100vh">
+									<div class="Block-column--6 align-items-flex-end">
+										<h3 class="title">
+											Aiermei 艾爾鎂
+										</h3>
+									</div>
+									<div class="Block-column--6 flex-column">
+										<div class="desc mb-2">
+											艾爾鎂 Aiermei - 生產並銷售各類型農/園藝高品質塑料資材<br><br>
+											秉持【誠信】、【創新】、【服務】經營理念<br>
+											以精益求精的精神提供貼心、多元化的服務
+										</div>
+										<div class="sub-desc">
+											<ul>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Function
+													</span>
+													購物電商 + 企業形象
+												</li>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Link
+													</span>
+													<a href="https://www.morway.com.tw//" target="_blank">
+														www.morway.com.tw
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Block--lg-7 position-relative">
+							<span class="tip-scroll">
+								Scroll
+							</span>
+							<div class="case-single-img">
+								<ul class="m-0">
+									<li>
+										<img src="image/work/case-2--0.jpg" alt="">
+									</li>
+									<li>
+										<img src="image/work/case-2--1.jpg" alt="">
+									</li>
+									<li class="text-right">
+										<img src="image/work/case-2--2.jpg" alt="">
+									</li>
+									<li class="text-center">
+										<img src="image/work/case-2--3.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- <div class="arrow-btn left">
+					<a href="#case_1" data-scroll class="color-black">
+						<i data-feather="arrow-left" class="font-size-20 position-relative top-4"></i>
+						MASAの料理ABC
+					</a>
+				</div>
+				<div class="arrow-btn right">
+					<a href="#case_3" data-scroll class="color-black">
+						浪浪別哭
+						<i data-feather="arrow-right" class="font-size-20 position-relative top-4"></i>
+					</a>
+				</div> -->
+			</section>
+
+			<section class="section-block" id="case_3">
+
+				<div class="Wrapper">
+
+					<div class="row">
+						<div class="Block--lg-5 position-relative">
+							<span class="back-towork">
+								<a href="#works" data-scroll>Back To Work</a>
+							</span>
+							<div class="case-single-content">
+								<div class="d-block d-lg-flex flex-column h-lg-100vh">
+									<div class="Block-column--6 align-items-flex-end">
+										<h3 class="title">
+											奎比克動能系統
+										</h3>
+									</div>
+									<div class="Block-column--6 flex-column">
+										<div class="desc mb-2">
+											我們的目標是把藝術與工程、理論與經驗完美地整合起來，將台灣的表演藝術帶到一個全新領域 —— <br>
+											有深度與廣度、能思考又能進化的舞台機關。
+										</div>
+										<div class="sub-desc">
+											<ul>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Function
+													</span>
+													舞台系統 + 企業形象
+												</li>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Link
+													</span>
+													<a href="https://www.cubical.com.tw/" target="_blank">
+														www.cubical.com.tw
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Block--lg-7 position-relative">
+							<span class="tip-scroll">
+								Scroll
+							</span>
+							<div class="case-single-img">
+								<ul class="m-0">
+									<li>
+										<img src="image/work/case-3--0.jpg" alt="">
+									</li>
+									<li>
+										<img src="image/work/case-3--1.jpg" alt="">
+									</li>
+									<li class="text-right">
+										<img src="image/work/case-3--2.jpg" alt="">
+									</li>
+									<li class="text-center">
+										<img src="image/work/case-3--3.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- <div class="arrow-btn left">
+					<a href="#case_2" data-scroll class="color-black">
+						<i data-feather="arrow-left" class="font-size-20 position-relative top-4"></i>
+						Hi A Day
+					</a>
+				</div> -->
+			</section>
+
+			<section class="section-block" id="case_4">
+				<div class="Wrapper">
+
+					<div class="row">
+						<div class="Block--lg-5 position-relative">
+							<span class="back-towork">
+								<a href="#works" data-scroll>Back To Work</a>
+							</span>
+							<div class="case-single-content">
+								<div class="d-block d-lg-flex flex-column h-lg-100vh">
+									<div class="Block-column--6 align-items-flex-end">
+										<h3 class="title">
+											MASAの料理ABC
+										</h3>
+									</div>
+									<div class="Block-column--6 flex-column">
+										<div class="desc mb-2">
+											MASA是一位專業，擁有25年經驗的日本廚師，<br>
+											他想要讓大家覺得煮菜很好玩，很愉快。<br>
+											在網站上，他努力介紹大家想要知道的料理，一起成長，一起享受做料理。
+										</div>
+										<div class="sub-desc">
+											<ul>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Function
+													</span>
+													企業形象 + 食譜介紹
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Block--lg-7 position-relative">
+							<span class="tip-scroll">
+								Scroll
+							</span>
+							<div class="case-single-img">
+								<ul class="m-0">
+									<li>
+										<img src="image/work/case-4--0.jpg" alt="">
+									</li>
+									<li>
+										<img src="image/work/case-4--1.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- <div class="arrow-btn right">
+					<a href="#case_2" data-scroll class="color-black">
+						Hi A Day
+						<i data-feather="arrow-right" class="font-size-20 position-relative top-4"></i>
+					</a>
+				</div> -->
+			</section>
+
+			<section class="section-block" id="case_5">
+
+				<div class="Wrapper">
+
+					<div class="row">
+						<div class="Block--lg-5 position-relative">
+							<span class="back-towork">
+								<a href="#works" data-scroll>Back To Work</a>
+							</span>
+							<div class="case-single-content">
+								<div class="d-block d-lg-flex flex-column h-lg-100vh">
+									<div class="Block-column--6 align-items-flex-end">
+										<h3 class="title">
+											Hi A Day
+										</h3>
+									</div>
+									<div class="Block-column--6 flex-column">
+										<div class="desc mb-2">
+											Hi！我們是兩個前後嫁到韓國的台灣小女子，
+											<br>
+											在韓國如何融入韓國人的家庭生活？
+											<br>
+											是怎麼樣互相幫助對方過著孤單的異國生活呢？
+											<br>
+											早晨一杯咖啡，配上 Hi A day 吧!
+										</div>
+										<div class="sub-desc">
+											<ul>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Function
+													</span>
+													韓流電商 + 文化分享
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Block--lg-7 position-relative">
+							<span class="tip-scroll">
+								Scroll
+							</span>
+							<div class="case-single-img">
+								<ul class="m-0">
+									<li>
+										<img src="image/work/case-5--0.jpg" alt="">
+									</li>
+									<li>
+										<img src="image/work/case-5--1.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="arrow-btn left">
+					<a href="#case_1" data-scroll class="color-black">
+						<i data-feather="arrow-left" class="font-size-20 position-relative top-4"></i>
+						MASAの料理ABC
+					</a>
+				</div>
+				<div class="arrow-btn right">
+					<a href="#case_3" data-scroll class="color-black">
+						浪浪別哭
+						<i data-feather="arrow-right" class="font-size-20 position-relative top-4"></i>
+					</a>
+				</div> -->
+			</section>
+
+			<section class="section-block" id="case_6">
+
+				<div class="Wrapper">
+
+					<div class="row">
+						<div class="Block--lg-5 position-relative">
+							<span class="back-towork">
+								<a href="#works" data-scroll>Back To Work</a>
+							</span>
+							<div class="case-single-content">
+								<div class="d-block d-lg-flex flex-column h-lg-100vh">
+									<div class="Block-column--6 align-items-flex-end">
+										<h3 class="title">
+											TALI 大秝設計
+										</h3>
+									</div>
+									<div class="Block-column--6 flex-column">
+										<div class="desc mb-2">
+											強調空間設計必須由內而外再由外而內經過全盤思考，<br>
+											建築與室內的全方位整合。
+										</div>
+										<div class="sub-desc">
+											<ul>
+												<li class="font-size-16">
+													<span class="d-block font-size-14">
+														Function
+													</span>
+													企業形象
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Block--lg-7 position-relative">
+							<span class="tip-scroll">
+								Scroll
+							</span>
+							<div class="case-single-img">
+								<ul class="m-0">
+									<li>
+										<img src="image/work/case-6--0.jpg" alt="">
+									</li>
+									<li>
+										<img src="image/work/case-6--1.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- <div class="arrow-btn left">
+					<a href="#case_2" data-scroll class="color-black">
+						<i data-feather="arrow-left" class="font-size-20 position-relative top-4"></i>
+						Hi A Day
+					</a>
+				</div> -->
+			</section>
+
+		</div>
+
+	</div>
+
+	<div id="cursor-2" class=""></div>
+	<div id="cursor" class=""></div>
+
+	<script type="text/javascript" src="js/jquery.min.js?v=3.6.0"></script>
+	<script type="text/javascript" src="js/feather.min.js"></script>
+	<script type="text/javascript" src="js/sweet-scroll.min.js?v=4.0.0"></script>
+	<script type="text/javascript" src="js/jquery.drawsvg.min.js"></script>
+	<script type="text/javascript" src="js/parallax.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>

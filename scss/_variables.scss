@@ -1,0 +1,283 @@
+//
+// Fonts
+//
+
+$font-family-base: "Playfair Display", "Noto Serif TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !default;
+
+$font-size-0: 0 !default;
+$font-size-base: 1rem !default;
+$font-size-xl: ($font-size-base * 2.25) !default;
+$font-size-lg: ($font-size-base * 1.25) !default;
+$font-size-sm: ($font-size-base * 0.875) !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-xl: ($line-height-base * 2.25) !default;
+$line-height-lg: ($line-height-base * 1.25) !default;
+$line-height-sm: ($line-height-base * 0.875) !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+//
+// Color
+//
+$white: #fff !default;
+$gray-1: #f8f9fa !default;
+$gray-2: #e9ecef !default;
+$gray-3: #dee2e6 !default;
+$gray-4: #ced4da !default;
+$gray-5: #adb5bd !default;
+$gray-6: #6c757d !default;
+$gray-7: #495057 !default;
+$gray-8: #343a40 !default;
+$gray-9: #212529 !default;
+$black: #000 !default;
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$color-base: #00ffa8 !default;
+
+//
+// grid
+//
+$screen-xs-min: 0px !default;
+$screen-sm-min: 576px !default;
+$screen-md-min: 768px !default;
+$screen-lg-min: 992px !default;
+$screen-xl-min: 1200px !default;
+$screen-xxl-min: 1440px !default;
+$screen-xxxl-min: 1800px !default;
+
+$screen-xxxl-max: 1799px !default;
+$screen-xxl-max: 1439px !default;
+$screen-xl-max: 1199px !default;
+$screen-lg-max: 991px !default;
+$screen-md-max: 767px !default;
+$screen-sm-max: 575px !default;
+
+$gutter-width: 32px;
+$grid-sum: 12;
+$grid-breakpoints: (
+    "": false,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px,
+    xxxl: 1800px,
+);
+
+//
+// margin padding
+//
+$margin-none: 0 !default;
+$margin-sm: 1 !default;
+$margin-base: 2 !default;
+$margin-lg: 3 !default;
+$margin-xl: 4 !default;
+$margin-xxl: 5 !default;
+
+$padding-none: 0 !default;
+$padding-sm: 1 !default;
+$padding-base: 2 !default;
+$padding-lg: 3 !default;
+$padding-xl: 4 !default;
+$padding-xxl: 5 !default;
+
+//
+// display
+//
+$d-block: block !default;
+$d-flex: flex !default;
+$d-inline: inline !default;
+$d-inline-block: inline-block !default;
+$d-none: none !default;
+$d-table: table !default;
+$d-table-cell: table-cell !default;
+
+//
+// flex
+//
+$flex-row: row;
+$flex-column: column;
+$flex-row-reverse: row-reverse;
+$flex-column-reverse: column-reverse;
+
+$flex-wrap: wrap;
+$flex-nowrap: nowrap;
+$flex-wrap-reverse: wrap-reverse;
+
+$flex-fill: 1 1 auto;
+
+$flex-grow-0: 0;
+$flex-grow-1: 1;
+
+$flex-shrink-0: 0;
+$flex-shrink-1: 1;
+
+//
+// justify content
+//
+$jc-start: flex-start;
+$jc-end: flex-end;
+$jc-center: center;
+$jc-between: space-between;
+$jc-around: space-around;
+
+//
+// align items
+//
+$ai-start: flex-start;
+$ai-end: flex-end;
+$ai-center: center;
+$ai-baseline: baseline;
+$ai-stretch: stretch;
+
+//
+// align content
+//
+$ac-start: flex-start;
+$ac-end: flex-end;
+$ac-center: center;
+$ac-between: space-between;
+$ac-around: space-around;
+$ac-stretch: stretch;
+
+//
+// align self
+//
+$as-auto: auto;
+$as-start: flex-start;
+$as-end: flex-end;
+$as-center: center;
+$as-baseline: baseline;
+$as-stretch: stretch;
+
+//
+// vertical align
+//
+$v-top: top !default;
+$v-middle: middle !default;
+$v-bottom: bottom !default;
+$v-baseline: baseline !default;
+$v-text-bottom: text-bottom !default;
+$v-text-top: text-top !default;
+
+//
+// text align
+//
+$text-center: center !default;
+$text-left: left !default;
+$text-right: right !default;
+
+//
+// width height
+//
+$w-auto: 0 auto !default;
+$w-100p: 100% !default;
+$h-auto: auto !default;
+$h-100p: 100% !default;
+$auto: auto !default;
+$w-100vw: 100vw !default;
+$h-100vh: 100vh !default;
+
+//
+// Buttons
+//
+$btn-padding-y: 0.375rem !default;
+$btn-padding-x: 0.75rem !default;
+$btn-line-height: $line-height-base !default;
+
+$btn-padding-y-sm: 0.25rem !default;
+$btn-padding-x-sm: 1rem !default;
+$btn-line-height-sm: $line-height-sm !default;
+
+$btn-padding-y-lg: 0.5rem !default;
+$btn-padding-x-lg: 1rem !default;
+$btn-line-height-lg: $line-height-lg !default;
+
+//
+// Border
+//
+$border-width-1: 1px !default;
+$border-width-2: 2px !default;
+$border-width-5: 5px !default;
+$border-width-6: 6px !default;
+$border-width-7: 7px !default;
+$border-width-8: 8px !default;
+$border-width-9: 9px !default;
+$border-width-10: 10px !default;
+
+$border-radius: 0.25rem !default;
+$border-radius-lg: 0.3rem !default;
+$border-radius-sm: 0.2rem !default;
+$border-radius-round: 100% !default;
+
+//
+// css filters
+//
+
+// 灰階
+$grayscale-0: grayscale(0) !default;
+$grayscale-10: grayscale(10%) !default;
+$grayscale-20: grayscale(20%) !default;
+$grayscale-30: grayscale(30%) !default;
+$grayscale-40: grayscale(40%) !default;
+$grayscale-50: grayscale(50%) !default;
+$grayscale-60: grayscale(60%) !default;
+$grayscale-70: grayscale(70%) !default;
+$grayscale-80: grayscale(80%) !default;
+$grayscale-90: grayscale(90%) !default;
+$grayscale-100: grayscale(1) !default;
+
+// 飽和
+$saturate-0: saturate(0) !default;
+$saturate-10: saturate(10%) !default;
+$saturate-20: saturate(20%) !default;
+$saturate-30: saturate(30%) !default;
+$saturate-40: saturate(40%) !default;
+$saturate-50: saturate(50%) !default;
+$saturate-60: saturate(60%) !default;
+$saturate-70: saturate(70%) !default;
+$saturate-80: saturate(80%) !default;
+$saturate-90: saturate(90%) !default;
+$saturate-100: saturate(1) !default;
+
+// 模糊
+$blur-0: blur(0) !default;
+$blur-1: blur(1px) !default;
+$blur-2: blur(2px) !default;
+$blur-3: blur(3px) !default;
+$blur-4: blur(4px) !default;
+$blur-5: blur(5px) !default;
+$blur-6: blur(6px) !default;
+$blur-7: blur(7px) !default;
+$blur-8: blur(8px) !default;
+$blur-9: blur(9px) !default;
+$blur-10: blur(10px) !default;
+
+//
+// Position
+//
+$position-absolute: absolute !default;
+$position-fixed: fixed !default;
+$position-relative: relative !default;
+$position-static: static !default;

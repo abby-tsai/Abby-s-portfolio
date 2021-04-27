@@ -1,0 +1,98 @@
+// letter spacing
+$letter-spacing-items: 10;
+
+@for $i from 1 through $letter-spacing-items {
+    .letter-spacing-#{$i} {
+        letter-spacing: #{$i}px;
+    }
+}
+
+// font size
+$font-size-items: 50;
+
+@for $i from 10 through $font-size-items {
+    .font-size-#{$i} {
+        font-size: #{$i}px;
+    }
+}
+
+// text align
+@mixin textalign($align) {
+    .text-#{$align} {
+        text-align: $align;
+    }
+}
+
+@mixin class-textalign($class, $align) {
+    .text-#{$class}-#{$align} {
+        text-align: $align;
+    }
+}
+
+@mixin all-textalign() {
+    @include textalign($text-center);
+    @include textalign($text-left);
+    @include textalign($text-right);
+}
+
+@mixin all-class-textalign($class) {
+    @include class-textalign($class, $text-center);
+    @include class-textalign($class, $text-left);
+    @include class-textalign($class, $text-right);
+}
+
+@include all-textalign();
+
+@media (min-width: $screen-sm-min) {
+    @include all-class-textalign(sm);
+}
+
+@media (min-width: $screen-md-min) {
+    @include all-class-textalign(md);
+}
+
+@media (min-width: $screen-lg-min) {
+    @include all-class-textalign(lg);
+}
+
+@media (min-width: $screen-xl-min) {
+    @include all-class-textalign(xl);
+}
+
+@media (min-width: $screen-xxl-min) {
+    @include all-class-textalign(xxl);
+}
+
+@media (min-width: $screen-xxxl-min) {
+    @include all-class-textalign(xxxl);
+}
+
+// color
+@each $color-name, $color in 
+    (white, $white),
+    (gray-1, $gray-1),
+    (gray-2, $gray-2),
+    (gray-3, $gray-3),
+    (gray-4, $gray-4),
+    (gray-5, $gray-5),
+    (gray-6, $gray-6),
+    (gray-7, $gray-7),
+    (gray-8, $gray-8),
+    (gray-9, $gray-9),
+    (black, $black),
+    (blue, $blue),
+    (indigo, $indigo),
+    (purple, $purple),
+    (pink, $pink),
+    (red, $red),
+    (orange, $orange),
+    (yellow, $yellow),
+    (green, $green),
+    (teal, $teal),
+    (cyan, $cyan),
+    (color-base, $color-base),
+{
+  .color-#{$color-name} {
+    color: $color;
+  }
+}

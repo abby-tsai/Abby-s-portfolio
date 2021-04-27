@@ -1,0 +1,108 @@
+.Wrapper {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Wrapper-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+%col {
+    // position: relative;
+    width: 100%;
+}
+
+@each $key, $value in $grid-breakpoints {
+    @for $var from 1 through $grid-sum {
+        @if not $value {
+            .Block--#{$var} {
+                @extend %col;
+            }
+        } @else {
+            .Block--#{$key}-#{$var} {
+                @extend %col;
+            }
+        }
+    }
+}
+
+@each $key, $value in $grid-breakpoints {
+    @if not $value {
+        @for $var from 1 to $grid-sum {
+            .Block--#{$var} {
+                max-width: 100% * ($var / $grid-sum);
+                flex: 0 0 (100% * ($var / $grid-sum));
+            }
+        }
+    } @else {
+        @media screen and (min-width: $value) {
+            @for $var from 1 to $grid-sum {
+                .Block--#{$key}-#{$var} {
+                    max-width: 100% * ($var / $grid-sum);
+                    flex: 0 0 (100% * ($var / $grid-sum));
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@each $key, $value in $grid-breakpoints {
+    @if not $value {
+        @for $var from 0 to $grid-sum {
+            .order-#{$var} {
+                order: $var;
+            }
+        }
+    } @else {
+        @media screen and (min-width: $value) {
+            @for $var from 0 to $grid-sum {
+                .order-#{$key}-#{$var} {
+                    order: $var;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .Wrapper {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .Wrapper {
+        max-width: 680px;
+    }
+}
+
+@media (min-width: $screen-xl-min) {
+    .Wrapper {
+        max-width: 890px;
+    }
+}
+
+@media (min-width: $screen-xxl-min) {
+    .Wrapper {
+        max-width: 1170px;
+    }
+}
+
+@media (min-width: $screen-xxxl-min) {
+    .Wrapper {
+        max-width: 1520px; /* 寬度可以隨著專案變化 */
+    }
+}
