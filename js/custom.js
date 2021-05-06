@@ -157,7 +157,7 @@ function addTag(value) {
         responselist.removeChild(dom)
     })
     // 新增剛剛建立的tag上去
-    responselist.appendChild(dom)
+    responselist.prepend(dom)
 }
 
 tagInput.addEventListener("click", function () {
