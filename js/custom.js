@@ -156,7 +156,7 @@ function addTag(value) {
         })
         responselist.removeChild(dom)
     })
-    // 新增剛剛建立的tag上去
+    // 新增剛剛建立的tag上去(prepend是放在元素之前)
     responselist.prepend(dom)
 }
 
