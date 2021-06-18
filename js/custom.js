@@ -127,52 +127,45 @@ $(function () {
 });
 // end
 
-// ====== 當你輸入文字到input，會產生在畫面
-var tagInput = document.getElementById("tagInput")
-var input = tagInput.querySelector(".input")
-var responselist = tagInput.querySelector(".response-list ul")
-var hidden = tagInput.querySelector(".hidden")
-var tmp = []
+// ====== 當你輸入文字到input，會產生在畫面，且儲存在localstorage
 
+var tagInput = document.getElementById("tagInput");
+var input = tagInput.querySelector(".input");
+var hidden = tagInput.querySelector(".hidden");
+var responselist = document.querySelector('.response-list ul');
+var tmp = [];
+var data = JSON.parse(localStorage.getItem('responseData')) || [];
+
+// 一個把input裡面的value清空的function
 function load() {
-    hidden.value = tmp.join(",")
-    console.log("hidden input vlaue: ", hidden.value)
+    hidden.value = tmp.join();
 }
 
-// 方法只需要傳入輸入的值就可以建立一個text出來
-function addTag(value) {
-    // 建立一個class是text的li
-    var dom = document.createElement("li")
-    dom.classList.add("text", "text-right")
-    // 將丟進來的值給這個tag
-    dom.innerText = value
-    // 還需要監聽點擊事件 這樣才可以處理點擊後要刪除自己的部分
-    dom.addEventListener("click", function (e) {
-        responselist.querySelectorAll(".tag").forEach(function (child, index) {
-            if (child === dom) {
-                tmp.splice(index, 1)
-                load()
-            }
-        })
-        responselist.removeChild(dom)
-    })
-    // 新增剛剛建立的tag上去(prepend是放在元素之前)
-    responselist.prepend(dom)
-}
-
-tagInput.addEventListener("click", function () {
-    input.focus()
-})
-
-input.addEventListener("keyup", function (e) {
-    var keycode = e.keyCode
-    if (keycode == 13 && input.value) {
-        addTag(input.value)
-        tmp.push(input.value)
-        load()
-        input.value = ""
+function addList(item) {
+    var dataLen = item.length;
+    var str = '';
+    for (var i = 0; i < dataLen; i++) {
+        str += '<li class="text text-right">' + item[i].content + "</li>";
     }
-})
+    responselist.innerHTML = str;
+}
+
+function addToLocal(e) {
+    var keycode = e.keyCode;
+    if (keycode == 13) {
+        var ob = {
+            content: input.value
+        }
+        data.unshift(ob);
+        load();
+        input.value = "";
+        localStorage.setItem('responseData', JSON.stringify(data));
+        addList(data);
+    }
+}
+
+input.addEventListener('keydown', addToLocal);
+addList(data);
 // end
 
 // ====== 新增星期幾
@@ -248,8 +241,9 @@ $(function () {
 // end
 
 
-
+// ====== Parallax js - 滑鼠移動，圖片會跟著晃動
 var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene, {
     relativeInput: true
 });
+// end

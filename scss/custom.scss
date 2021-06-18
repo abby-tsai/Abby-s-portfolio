@@ -861,7 +861,9 @@ start. content*/
 		max-height: 250px;
 		width: 600px;
 		overflow-y: auto;
-		padding: 0 5px;
+		padding: 0 5px;    
+		z-index: 1;
+		position: relative;
 		ul {
 			font-size: 0;
 			li.text {
