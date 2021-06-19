@@ -147,6 +147,20 @@ function addList(item) {
     for (var i = 0; i < dataLen; i++) {
         str += '<li class="text text-right">' + item[i].content + "</li>";
     }
+    str = str + `
+        <li class="text">
+			你好，我是蔡欣恬
+		</li>
+        <li class="text">
+			踏入設計和前端這幾年，很充實，也有很多想法想落實。
+		</li>
+		<li class="text">
+			雖然我還在摸索js，但我會盡力的！
+		</li>
+		<li class="text">
+			希望你還喜歡我的作品集！
+		</li>
+        `
     responselist.innerHTML = str;
 }
 
