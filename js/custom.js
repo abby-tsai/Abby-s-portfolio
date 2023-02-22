@@ -149,13 +149,13 @@ function addList(item) {
     }
     str = str + `
         <li class="text">
-			你好，我是蔡欣恬
+			你好，我是 Abby
 		</li>
         <li class="text">
 			踏入設計和前端這幾年，很充實，也有很多想法想落實。
 		</li>
 		<li class="text">
-			雖然我還在摸索js，但我會盡力的！
+            著重加強 Vue.js 和學習 TypeScript 來增進前端技術。
 		</li>
 		<li class="text">
 			希望你還喜歡我的作品集！
