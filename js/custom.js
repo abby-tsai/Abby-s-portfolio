@@ -158,7 +158,7 @@ function addList(item) {
             著重加強 Vue.js 和學習 TypeScript 來增進前端技術。
 		</li>
 		<li class="text">
-			希望你還喜歡我的作品集！
+			希望你還喜歡我的 UI 作品集！
 		</li>
         `
     responselist.innerHTML = str;
