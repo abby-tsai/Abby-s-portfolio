@@ -42,11 +42,12 @@ start. header*/
 	position: absolute;
 	width: 16px;
 	height: 16px;
-	background-color: $color-base;
-	border: 2px solid $color-base;
+	background-color: #00ffa8;
+	border: 2px solid #00ffa8;
 	top: 50%;
 	left: 50%;
 	z-index: 99;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -59,11 +60,6 @@ start. header*/
 	-ms-border-radius: 100%;
 	-o-border-radius: 100%;
 	pointer-events: none;
-	transition: 0.1s;
-	-webkit-transition: 0.1s;
-	-moz-transition: 0.1s;
-	-ms-transition: 0.1s;
-	-o-transition: 0.1s;
 	&.hover,
 	&.scroll {
 		width: 80px;
@@ -88,10 +84,11 @@ start. header*/
 	position: absolute;
 	width: 15px;
 	height: 15px;
-	border: 1px solid $gray-5;
+	border: 1px solid #adb5bd;
 	top: 50%;
 	left: 50%;
 	z-index: 99;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -104,11 +101,6 @@ start. header*/
 	-ms-border-radius: 100%;
 	-o-border-radius: 100%;
 	pointer-events: none;
-	transition: 0.15s;
-	-webkit-transition: 0.15s;
-	-moz-transition: 0.15s;
-	-ms-transition: 0.15s;
-	-o-transition: 0.15s;
 	&.hover {
 		width: 10px;
 		height: 10px;
