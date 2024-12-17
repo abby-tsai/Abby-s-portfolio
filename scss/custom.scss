@@ -716,6 +716,12 @@ start. content*/
 	animation-iteration-count: infinite;
 }
 
+.case-single-info {
+	position: $position-absolute;
+	bottom: 15px;
+	left: calc(100% + 15px);
+}
+
 .tip-scroll {
 	display: none;
 	position: $position-absolute;
