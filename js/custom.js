@@ -16,7 +16,7 @@ document.addEventListener(
             vertical: true,                 // Enable the vertical scroll
             horizontal: true,              // Enable the horizontal scroll
             cancellable: true,              // When fired wheel or touchstart events to stop scrolling
-            updateURL: false,               // Update the URL hash on after scroll (true | false | 'push' | 'replace')
+            updateURL: true,               // Update the URL hash on after scroll (true | false | 'push' | 'replace')
             preventDefault: true,           // Cancels the container element click event
             stopPropagation: true,          // Prevents further propagation of the container element click event in the bubbling phase
 
@@ -151,14 +151,14 @@ function addList(item) {
         <li class="text">
 			你好，我是 Abby
 		</li>
+		<li class="text">
+			歡迎參觀我的<a href="#works" data-scroll>作品</a>
+		</li>
         <li class="text">
-			踏入設計和前端這幾年，很充實，也有很多想法想落實。
+			踏入設計和前端這幾年，很多想法正在落實。
 		</li>
 		<li class="text">
-            著重加強 Vue.js 和學習 TypeScript 來增進前端技術。
-		</li>
-		<li class="text">
-			希望你還喜歡我的 UI 作品集！
+            目前著重加強學習 Vue.js 來增進前端技術。
 		</li>
         `
     responselist.innerHTML = str;
