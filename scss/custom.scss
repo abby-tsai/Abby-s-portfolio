@@ -179,8 +179,8 @@ start. header*/
 	}
 	&::before {
 		content: "";
-		width: 22px;
-		height: 22px;
+		width: 30px;
+		height: 30px;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -199,30 +199,30 @@ start. header*/
 	}
 	10% {
 		top: 0;
-		left: 22px;
+		left: 30px;
 	}
 	20% {
 		top: 0;
-		left: 44px;
+		left: 60px;
 	}
 	30% {
-		top: 22px;
-		left: 44px;
+		top: 30px;
+		left: 60px;
 	}
 	40% {
-		top: 44px;
-		left: 44px;
+		top: 60px;
+		left: 60px;
 	}
 	50% {
-		top: 44px;
-		left: 22px;
+		top: 60px;
+		left: 30px;
 	}
 	60% {
-		top: 44px;
+		top: 60px;
 		left: 0px;
 	}
 	70% {
-		top: 22px;
+		top: 30px;
 		left: 0px;
 	}
 	100% {
