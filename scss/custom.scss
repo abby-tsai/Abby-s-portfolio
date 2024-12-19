@@ -120,7 +120,6 @@ start. header*/
 	left: 0;
 	height: 100%;
 	width: 100%;
-	// background-image: url(../../image/work/subtle_dots.png);
 	background-color: #000;
 	z-index: 2;
 }
@@ -400,15 +399,19 @@ start. header*/
 	}
 }
 
+// 1199px
 @media (max-width: $screen-xl-max) {
 }
 
+// 991px
 @media (max-width: $screen-lg-max) {
 }
 
+// 767px
 @media (max-width: $screen-md-max) {
 }
 
+// 575px
 @media (max-width: $screen-sm-max) {
 }
 
@@ -418,15 +421,19 @@ start. header*/
 /*--------------------------------
 start. footer*/
 
+// 1199px
 @media (max-width: $screen-xl-max) {
 }
 
+// 991px
 @media (max-width: $screen-lg-max) {
 }
 
+// 767px
 @media (max-width: $screen-md-max) {
 }
 
+// 575px
 @media (max-width: $screen-sm-max) {
 }
 
@@ -593,8 +600,6 @@ start. content*/
 			content: "";
 			width: 100%;
 			height: 50%;
-			background-image: url(../../image/work/subtle_dots.png);
-			background-color: $color-base;
 			position: $position-absolute;
 			top: 50%;
 			left: 0;
@@ -610,15 +615,25 @@ start. content*/
 			-o-transition: 0.5s ease;
 		}
 		.header {
-			display: none;
-			font-size: 28px;
-			margin: 10px 0;
-			letter-spacing: 1px;
-			transition: 0.4s ease;
-			-webkit-transition: 0.4s ease;
-			-moz-transition: 0.4s ease;
-			-ms-transition: 0.4s ease;
-			-o-transition: 0.4s ease;
+			font-family: 'Taipei Sans TC Light';
+			font-size: 22px;
+			opacity: 0;
+			position: absolute;
+			top: 20px;
+			right: -10px;
+			z-index: 1;
+			writing-mode: vertical-lr;
+			letter-spacing: 5px;
+			background: #000;
+			white-space: nowrap;
+			color: #fff;
+			padding: 10px 5px;
+			margin: 0;
+			transition: 0.6s ease;
+			-webkit-transition: 0.6s ease;
+			-moz-transition: 0.6s ease;
+			-ms-transition: 0.6s ease;
+			-o-transition: 0.6s ease;
 		}
 		.imgbox {
 			position: $position-relative;
@@ -646,7 +661,8 @@ start. content*/
 	}
 	&:hover {
 		.header {
-			color: $color-base;
+				opacity: 1;
+				right: -20px;
 		}
 		.case-unit {
 			&::before {
@@ -692,8 +708,8 @@ start. content*/
 	font-weight: $font-weight-bold;
 	font-size: $font-size-sm;
 	color: $black;
-	top: 100px;
-	right: -20px;
+	top: 75px;
+	right: -45px;
 	transform: rotate(-90deg);
 	-webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(-90deg);
@@ -718,8 +734,22 @@ start. content*/
 
 .case-single-info {
 	position: $position-absolute;
-	bottom: 15px;
+	bottom: 13px;
 	left: calc(100% + 15px);
+	display: $d-flex;
+	gap: 3px;
+	align-items: flex-end;
+	a {
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    letter-spacing: 4px;
+    background: $black;
+    color: $white;
+    padding: 7px 3px;
+    font-weight: $font-weight-light;
+		font-size: $font-size-base;
+	}
 }
 
 .tip-scroll {
@@ -792,6 +822,7 @@ start. content*/
 	overflow-y: auto;
 	img {
 		display: block;
+		width: 100%;
 	}
 }
 
@@ -946,6 +977,7 @@ start. content*/
 	pointer-events: none;
 }
 
+// 1799px
 @media (max-width: $screen-xxxl-max) {
 	.case-single-content {
 		padding: 0 60px 0 0;
@@ -966,27 +998,20 @@ start. content*/
 	}
 	.case {
 		padding: 0 8px;
-		&-unit {
-			.header {
-				font-size: 23px;
-				z-index: 1;
-				position: relative;
-			}
-		}
 	}
 }
 
+// 1439px
 @media (max-width: $screen-xxl-max) {
 	.case {
 		padding: 15px 8px 30px;
 		&-unit {
-			.header {
-				font-size: 23px;
-				z-index: 1;
-				position: relative;
-			}
 			.imgbox {
 				height: 240px;
+			}
+			.header {
+				font-size: 20px;
+				opacity: 1;
 			}
 		}
 	}
@@ -1003,6 +1028,7 @@ start. content*/
 	}
 }
 
+// 1199px
 @media (max-width: $screen-xl-max) {
 	.case-single-content {
 		.title {
@@ -1028,21 +1054,18 @@ start. content*/
 	}
 }
 
+// 991px
 @media (max-width: $screen-lg-max) {
 	.case-single-content {
 		margin-bottom: 60px;
 	}
-	.case-single-img {
-		overflow-y: initial;
-		max-height: initial;
-		ul {
-			li {
-				padding-bottom: 30px;
-			}
-		}
+	.case-single-info {
+		bottom: 0;
+    left: calc(100% + 10px);
+		flex-direction: column;
 	}
 	.back-towork {
-		right: -50px;
+		right: -43px;
 	}
 	.tip-scroll {
 		display: block;
@@ -1070,6 +1093,7 @@ start. content*/
 	}
 }
 
+// 767px
 @media (max-width: $screen-md-max) {
 	/*g-recaptcha*/
 	.g-recaptcha {
@@ -1077,9 +1101,6 @@ start. content*/
 		-webkit-transform: scale(0.82);
 		transform-origin: 0 0;
 		-webkit-transform-origin: 0 0;
-	}
-	.cover-img-block {
-		height: 65vh;
 	}
 	.svg-line {
 		display: none;
@@ -1115,12 +1136,15 @@ start. content*/
 		padding: 0 8px 30px;
 		&-unit {
 			.header {
-				font-size: 20px;
+				top: 0;
+				right: 0;
+				font-size: 18px;
 			}
 		}
 	}
 }
 
+// 575px
 @media (max-width: $screen-sm-max) {
 	.about-content {
 		right: 50%;
@@ -1150,7 +1174,7 @@ start. content*/
 	}
 	.Wrapper,
 	.Wrapper-fluid {
-		padding-bottom: 80px;
+		// padding-bottom: 80px;
 	}
 }
 

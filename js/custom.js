@@ -4,6 +4,7 @@ feather.replace({ width: '1em', height: '1em' })
 // end
 
 // ====== SweetScroll
+// https://github.com/tsuyoshiwada/sweet-scroll
 document.addEventListener(
     'DOMContentLoaded',
     () => {
@@ -21,11 +22,28 @@ document.addEventListener(
             stopPropagation: true,          // Prevents further propagation of the container element click event in the bubbling phase
 
             // Callbacks
-            before: null,
-            after: null,
-            cancel: null,
-            complete: null,
-            step: null,
+            before: (offset, trigger, scroller) => {
+                // console.log('before!!', offset, trigger, scroller);
+            },
+            after: (offset, trigger, scroller) => {
+                // console.log('after!!', offset, trigger, scroller);
+            },
+            cancel: (scroller) => {
+                // console.log('cancel!!', scroller);
+            },
+            complete: (isCancel, scroller) => {
+                // console.log('Complete!!', isCancel, scroller, scroller.ctx.hash);
+                test(scroller.ctx.hash);
+                function test(hash){
+                    document.querySelectorAll(".controller li").forEach((item)=> {
+                        item.classList.remove("active");
+                        document.querySelector(`${hash}_btn`).classList.add("active");
+                    })
+                }
+            },
+            step: (time, scroller) => {
+                // console.log('step!!', time, scroller);
+            },
         }, '#main-wrapper');
 
         scroller.to('#home');

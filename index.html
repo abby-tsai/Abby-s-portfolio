@@ -18,15 +18,15 @@
 		<div class="loader-box">
 			<div class="controller">
 				<ul>
-					<li><a href="#abby" data-scroll>A</a></li>
-					<li class="active"><a href="#home" data-scroll>H</a></li>
-					<li><a href="#works" data-scroll>W</a></li>
-					<li><a href="#case_1" data-scroll>1</a></li>
-					<li><a href="#case_2" data-scroll>2</a></li>
-					<li><a href="#case_3" data-scroll>3</a></li>
-					<li><a href="#case_4" data-scroll>4</a></li>
-					<li><a href="#case_5" data-scroll>5</a></li>
-					<li><a href="#case_6" data-scroll>6</a></li>
+					<li id="abby_btn"><a href="#abby" data-scroll>A</a></li>
+					<li id="home_btn" class="active"><a href="#home" data-scroll>H</a></li>
+					<li id="works_btn"><a href="#works" data-scroll>W</a></li>
+					<li id="case_1_btn"><a href="#case_1" data-scroll>1</a></li>
+					<li id="case_2_btn"><a href="#case_2" data-scroll>2</a></li>
+					<li id="case_3_btn"><a href="#case_3" data-scroll>3</a></li>
+					<li id="case_4_btn"><a href="#case_4" data-scroll>4</a></li>
+					<li id="case_5_btn"><a href="#case_5" data-scroll>5</a></li>
+					<li id="case_6_btn"><a href="#case_6" data-scroll>6</a></li>
 				</ul>
 			</div>
 		</div>
@@ -55,13 +55,13 @@
 
 			<section class="section-block" id="abby">
 				<div class="Wrapper-fluid">
-					<div class="row">
-						<div class="Block--md-4 order-md-1 d-none d-md-block">
+					<div class="row h-100vh">
+						<div class="Block--md-4 Block--1 order-md-1 order-2">
 							<div class="cover-img-block"
-								style="background-image: url(image/about/bg-about-2.webp); background-size: cover; background-position: center;">
+								style="background-image: url(image/about/bg-about-1.webp); background-size: cover; background-position: center;">
 							</div>
 						</div>
-						<div class="Block--md-4 order-md-2 align-self-center">
+						<div class="Block--md-4 Block--10 order-md-2 order-3 align-self-center">
 							<div class="skill text-center">
 								<ul>
 									<li>
@@ -107,9 +107,9 @@
 								</ul>
 							</div>
 						</div>
-						<div class="Block--md-4 order-md-3 d-none d-md-block">
+						<div class="Block--md-4 Block--1 order-md-3 order-1">
 							<div class="cover-img-block"
-								style="background-image: url(image/about/bg-about-1.webp); background-size: cover; background-position: center;">
+								style="background-image: url(image/about/bg-about-2.webp); background-size: cover; background-position: center;">
 
 								<!-- <div class="layout dark-3"></div> -->
 
@@ -130,7 +130,7 @@
 				</div>
 
 				<div class="arrow-btn right">
-					<a href="#home" data-scroll class="color-white">
+					<a href="#home" data-scroll>
 						HOME
 						<i data-feather="arrow-right" class="font-size-20 position-relative top-4"></i>
 					</a>
@@ -142,7 +142,7 @@
 				<div class="Wrapper">
 
 					<div class="row h-100vh">
-						<div class="Block--xxl-8 align-self-md-center align-self-lg-flex-end align-self-xl-center">
+						<div class="Block--xxl-8 align-self-md-center align-self-lg-flex-end align-self-xl-center align-self-center">
 
 							<div class="home-left">
 
@@ -225,7 +225,7 @@
 
 							<div class="case">
 								<div class="case-unit">
-									<h2 class="header text-center">浪途 noramichi</h2>
+									<h2 class="header text-center">浪途</h2>
 									<div class="imgbox" style="background-image: url(image/work/bg-case-1_2x.webp);">
 									</div>
 								</div>
@@ -273,7 +273,7 @@
 
 							<div class="case">
 								<div class="case-unit">
-									<h2 class="header text-center">MASAの<br>料理ABC</h2>
+									<h2 class="header text-center">MASAの料理ABC</h2>
 									<div class="imgbox" style="background-image: url(image/work/bg-case-5_2x.webp);">
 									</div>
 								</div>
@@ -285,7 +285,7 @@
 
 							<div class="case">
 								<div class="case-unit">
-									<h2 class="header text-center">TALI 大秝設計</h2>
+									<h2 class="header text-center">TALI大秝設計</h2>
 									<div class="imgbox" style="background-image: url(image/work/bg-case-6_2x.webp);">
 									</div>
 								</div>
@@ -304,50 +304,12 @@
 			</section>
 
 			<section class="section-block" id="case_1">
-				<div class="Wrapper">
+				<div class="Wrapper pl-0 pr-3 px-md-2 bg-md-gray-8">
 
 					<div class="row">
-						<!-- <div class="Block--lg-5 position-relative">
-							<div class="case-single-content">
-								<div class="d-block d-lg-flex flex-column h-lg-100vh">
-									<div class="Block-column--6 align-items-flex-end">
-										<h3 class="title">
-											雅敦建設
-										</h3>
-									</div>
-									<div class="Block-column--6 flex-column">
-										<div class="desc mb-2">
-											我們任何建案，就能感受到小細節與大格局的
-											「用心」與「實在」<br><br>
-											雅敦建設針對現代潮流與創新思維<br>
-											結合台灣社會現況及發展的新型態演化<br>
-											希望能帶給更多住戶更多的感動。
-										</div>
-										<div class="sub-desc">
-											<ul>
-												<li class="font-size-16">
-													<span class="d-block font-size-14">
-														Function
-													</span>
-													客戶服務 + 企業形象
-												</li>
-												<li class="font-size-16">
-													<span class="d-block font-size-14">
-														Link
-													</span>
-													<a href="https://www.yatiarch.com.tw/" target="_blank">
-														www.yatiarch.com.tw
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> -->
 						<div class="Block--lg-12 position-relative">
 							<span class="back-towork">
-								<a href="#works" data-scroll>Back To Work</a>
+								<a href="#works" data-scroll>Back</a>
 							</span>
 							<div class="case-single-img">
 								<ul class="m-0">
@@ -355,12 +317,28 @@
 										<img src="image/work/case-1--4.webp"
 											srcset="image/work/case-1--4.webp 1x, image/work/case-1--4_2x.webp 2x" alt=""  loading="lazy">
 									</li>
+									<li>
+										<img src="image/work/case-1--5.webp"
+											srcset="image/work/case-1--5.webp 1x, image/work/case-1--5_2x.webp 2x" alt=""  loading="lazy">
+									</li>
 								</ul>
 							</div>
 							<div class="case-single-info">
-								<a href="https://noramichi.app/" target="_blank">
-									<i data-feather="link" class="font-size-20"></i>
+								<a href="https://noramichi.app/" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
 									浪途流浪動物通報平台
+								</a>
+								<a href="https://wabay.tw/projects/noramichi-cagecat" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
+									貨櫃貓裝箱
+								</a>
+								<a href="https://shop.noramichi.app/products/1949" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
+									輕鬆鏟吸附型貓砂
+								</a>
+								<a href="https://shop.noramichi.app/products/2811" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
+									砂盆淨味君
 								</a>
 							</div>
 						</div>
@@ -371,22 +349,34 @@
 
 			<section class="section-block" id="case_2">
 
-				<div class="Wrapper">
+				<div class="Wrapper pl-0 pr-3 px-md-2">
 
 					<div class="row">
 						<div class="Block--lg-12 position-relative">
 							<span class="back-towork">
-								<a href="#works" data-scroll>Back To Work</a>
-							</span>
-							<span class="tip-scroll">
-								Scroll
+								<a href="#works" data-scroll>Back</a>
 							</span>
 							<div class="case-single-img">
 								<ul class="m-0">
 									<li>
-										<img src="image/work/case-2--4.webp" alt="" loading="lazy">
+										<img src="image/work/case-2--4.webp"
+											srcset="image/work/case-2--4.webp 1x, image/work/case-2--4_2x.webp 2x" alt=""  loading="lazy">
+									</li>
+									<li>
+										<img src="image/work/case-2--5.webp"
+											srcset="image/work/case-2--5.webp 1x, image/work/case-2--5_2x.webp 2x" alt=""  loading="lazy">
 									</li>
 								</ul>
+							</div>
+							<div class="case-single-info">
+								<a href="https://abby-tsai.github.io/cat-food-tool/src/index.html" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
+									貓食配方所
+								</a>
+								<a href="https://abby-tsai.github.io/cat-wet-half-tool/" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
+									貓食配方所 Vue
+								</a>
 							</div>
 						</div>
 					</div>
@@ -397,22 +387,32 @@
 
 			<section class="section-block" id="case_3">
 
-				<div class="Wrapper">
+				<div class="Wrapper pl-0 pr-3 px-md-2">
 
 					<div class="row">
 						<div class="Block--lg-12 position-relative">
 							<span class="back-towork">
-								<a href="#works" data-scroll>Back To Work</a>
-							</span>
-							<span class="tip-scroll">
-								Scroll
+								<a href="#works" data-scroll>Back</a>
 							</span>
 							<div class="case-single-img">
 								<ul class="m-0">
 									<li>
-										<img src="image/work/case-3--4.webp" alt="" loading="lazy">
+										<li>
+											<img src="image/work/case-3--4.webp"
+												srcset="image/work/case-3--4.webp 1x, image/work/case-3--4_2x.webp 2x" alt=""  loading="lazy">
+										</li>
+										<li>
+											<img src="image/work/case-3--5.webp"
+												srcset="image/work/case-3--5.webp 1x, image/work/case-3--5_2x.webp 2x" alt=""  loading="lazy">
+										</li>
 									</li>
 								</ul>
+							</div>
+							<div class="case-single-info">
+								<a href="http://abby.draft.nutsmind.com.tw/project/AA24-emid/finish/01/index.html" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
+									恆慕國際設計官網
+								</a>
 							</div>
 						</div>
 					</div>
@@ -421,22 +421,26 @@
 			</section>
 
 			<section class="section-block" id="case_4">
-				<div class="Wrapper">
+				<div class="Wrapper pl-0 pr-3 px-md-2">
 
 					<div class="row">
 						<div class="Block--lg-12 position-relative">
 							<span class="back-towork">
-								<a href="#works" data-scroll>Back To Work</a>
-							</span>
-							<span class="tip-scroll">
-								Scroll
+								<a href="#works" data-scroll>Back</a>
 							</span>
 							<div class="case-single-img">
 								<ul class="m-0">
 									<li>
-										<img src="image/work/case-4--4.webp" alt="" loading="lazy">
+										<img src="image/work/case-4--4.webp"
+											srcset="image/work/case-4--4.webp 1x, image/work/case-4--4_2x.webp 2x" alt=""  loading="lazy">
 									</li>
 								</ul>
+							</div>
+							<div class="case-single-info">
+								<a href="http://abby.draft.nutsmind.com.tw/project/AA1700112-yatiarch/finish/05/index.html" target="_blank" class="font-size">
+									<i data-feather="link" class="font-size-15"></i>
+									雅敦建設官網
+								</a>
 							</div>
 						</div>
 					</div>
@@ -446,20 +450,18 @@
 
 			<section class="section-block" id="case_5">
 
-				<div class="Wrapper">
+				<div class="Wrapper pl-0 pr-3 px-md-2">
 
 					<div class="row">
 						<div class="Block--lg-12 position-relative">
 							<span class="back-towork">
-								<a href="#works" data-scroll>Back To Work</a>
-							</span>
-							<span class="tip-scroll">
-								Scroll
+								<a href="#works" data-scroll>Back</a>
 							</span>
 							<div class="case-single-img">
 								<ul class="m-0">
 									<li>
-										<img src="image/work/case-5--4.webp" alt="" loading="lazy">
+										<img src="image/work/case-5--4.webp"
+											srcset="image/work/case-5--4.webp 1x, image/work/case-5--4_2x.webp 2x" alt=""  loading="lazy">
 									</li>
 								</ul>
 							</div>
@@ -471,20 +473,18 @@
 
 			<section class="section-block" id="case_6">
 
-				<div class="Wrapper">
+				<div class="Wrapper pl-0 pr-3 px-md-2">
 
 					<div class="row">
 						<div class="Block--lg-12 position-relative">
 							<span class="back-towork">
-								<a href="#works" data-scroll>Back To Work</a>
-							</span>
-							<span class="tip-scroll">
-								Scroll
+								<a href="#works" data-scroll>Back</a>
 							</span>
 							<div class="case-single-img">
 								<ul class="m-0">
 									<li>
-										<img src="image/work/case-6--4.webp" alt="" loading="lazy">
+										<img src="image/work/case-6--4.webp"
+											srcset="image/work/case-6--4.webp 1x, image/work/case-6--4_2x.webp 2x" alt=""  loading="lazy">
 									</li>
 								</ul>
 							</div>

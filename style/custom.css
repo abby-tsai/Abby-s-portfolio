@@ -1,7 +1,11 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Taipei Sans TC";
-  src: url("../fonts/TaipeiSansTCBeta-Regular.ttf");
+  font-family: "Taipei Sans TC Regular";
+  src: url("/fonts/TaipeiSansTCBeta-Regular.ttf");
+}
+@font-face {
+  font-family: "Taipei Sans TC Light";
+  src: url("/fonts/TaipeiSansTCBeta-Light.ttf");
 }
 html {
   font-size: 16px;
@@ -6488,8 +6492,6 @@ start. content*/
   content: "";
   width: 100%;
   height: 50%;
-  background-image: url(../../image/work/subtle_dots.png);
-  background-color: #00ffa8;
   position: absolute;
   top: 50%;
   left: 0;
@@ -6505,15 +6507,27 @@ start. content*/
   -o-transition: 0.5s ease;
 }
 .case-unit .header {
-  display: none;
-  font-size: 28px;
-  margin: 10px 0;
-  letter-spacing: 1px;
-  transition: 0.4s ease;
-  -webkit-transition: 0.4s ease;
-  -moz-transition: 0.4s ease;
-  -ms-transition: 0.4s ease;
-  -o-transition: 0.4s ease;
+  font-family: "Taipei Sans TC Light";
+  font-size: 22px;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  z-index: 1;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  letter-spacing: 5px;
+  background: #000;
+  white-space: nowrap;
+  color: #fff;
+  padding: 10px 5px;
+  margin: 0;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
 }
 .case-unit .imgbox {
   position: relative;
@@ -6539,7 +6553,8 @@ start. content*/
   left: 0;
 }
 .case:hover .header {
-  color: #00ffa8;
+  opacity: 1;
+  right: -20px;
 }
 .case:hover .case-unit::before {
   transform: translateY(-50%) skewX(-10deg);
@@ -6583,8 +6598,8 @@ start. content*/
   font-weight: 700;
   font-size: 0.875rem;
   color: #000;
-  top: 100px;
-  right: -20px;
+  top: 75px;
+  right: -45px;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -6612,8 +6627,26 @@ start. content*/
 
 .case-single-info {
   position: absolute;
-  bottom: 15px;
+  bottom: 13px;
   left: calc(100% + 15px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.case-single-info a {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  letter-spacing: 4px;
+  background: #000;
+  color: #fff;
+  padding: 7px 3px;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 .tip-scroll {
@@ -6709,6 +6742,7 @@ start. content*/
 }
 .case-single-img img {
   display: block;
+  width: 100%;
 }
 
 .case-single-img::-webkit-scrollbar,
@@ -6883,23 +6917,17 @@ start. content*/
   .case {
     padding: 0 8px;
   }
-  .case-unit .header {
-    font-size: 23px;
-    z-index: 1;
-    position: relative;
-  }
 }
 @media (max-width: 1439px) {
   .case {
     padding: 15px 8px 30px;
   }
-  .case-unit .header {
-    font-size: 23px;
-    z-index: 1;
-    position: relative;
-  }
   .case-unit .imgbox {
     height: 240px;
+  }
+  .case-unit .header {
+    font-size: 20px;
+    opacity: 1;
   }
   .home-left {
     padding-left: 0;
@@ -6935,15 +6963,16 @@ start. content*/
   .case-single-content {
     margin-bottom: 60px;
   }
-  .case-single-img {
-    overflow-y: initial;
-    max-height: initial;
-  }
-  .case-single-img ul li {
-    padding-bottom: 30px;
+  .case-single-info {
+    bottom: 0;
+    left: calc(100% + 10px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .back-towork {
-    right: -50px;
+    right: -43px;
   }
   .tip-scroll {
     display: block;
@@ -6969,9 +6998,6 @@ start. content*/
     -webkit-transform: scale(0.82);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
-  }
-  .cover-img-block {
-    height: 65vh;
   }
   .svg-line {
     display: none;
@@ -7004,7 +7030,9 @@ start. content*/
     padding: 0 8px 30px;
   }
   .case-unit .header {
-    font-size: 20px;
+    top: 0;
+    right: 0;
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
@@ -7027,10 +7055,6 @@ start. content*/
   }
   .home-hry .input-group {
     font-size: 15px;
-  }
-  .Wrapper,
-  .Wrapper-fluid {
-    padding-bottom: 80px;
   }
 }
 /*end. content
