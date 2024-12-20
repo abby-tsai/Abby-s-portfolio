@@ -279,3 +279,10 @@ var parallaxInstance = new Parallax(scene, {
     relativeInput: true
 });
 // end
+
+
+// ====== 所有畫面至少最小高度 = 螢幕顯示高度
+document.querySelectorAll(".section-block").forEach((item) => {
+    item.style.minHeight = window.visualViewport.height + "px";
+});
+// end

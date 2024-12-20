@@ -6102,30 +6102,30 @@ start. header*/
   }
   10% {
     top: 0;
-    left: 30px;
+    left: 29px;
   }
   20% {
     top: 0;
-    left: 60px;
+    left: 58px;
   }
   30% {
-    top: 30px;
-    left: 60px;
+    top: 29px;
+    left: 58px;
   }
   40% {
-    top: 60px;
-    left: 60px;
+    top: 58px;
+    left: 58px;
   }
   50% {
-    top: 60px;
-    left: 30px;
+    top: 58px;
+    left: 29px;
   }
   60% {
-    top: 60px;
+    top: 58px;
     left: 0px;
   }
   70% {
-    top: 30px;
+    top: 29px;
     left: 0px;
   }
   100% {
@@ -6141,30 +6141,30 @@ start. header*/
   }
   10% {
     top: 0;
-    left: 30px;
+    left: 29px;
   }
   20% {
     top: 0;
-    left: 60px;
+    left: 58px;
   }
   30% {
-    top: 30px;
-    left: 60px;
+    top: 29px;
+    left: 58px;
   }
   40% {
-    top: 60px;
-    left: 60px;
+    top: 58px;
+    left: 58px;
   }
   50% {
-    top: 60px;
-    left: 30px;
+    top: 58px;
+    left: 29px;
   }
   60% {
-    top: 60px;
+    top: 58px;
     left: 0px;
   }
   70% {
-    top: 30px;
+    top: 29px;
     left: 0px;
   }
   100% {
@@ -6353,7 +6353,12 @@ start. content*/
 }
 
 .section-block {
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 33.33%;
   float: left;
   position: relative;
