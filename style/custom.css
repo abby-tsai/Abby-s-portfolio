@@ -6353,6 +6353,7 @@ start. content*/
 }
 
 .section-block {
+  height: 100dvh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
