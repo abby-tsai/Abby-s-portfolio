@@ -6743,7 +6743,7 @@ start. content*/
   }
 }
 .case-single-img {
-  max-height: 100vh;
+  max-height: 100dvh;
   overflow-y: auto;
 }
 .case-single-img img {
