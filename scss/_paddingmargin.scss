@@ -108,7 +108,12 @@
     @include make-paddings($padding-base);
     @include make-paddings($padding-lg);
     @include make-paddings($padding-xl);
-    @include make-paddings($padding-xxl);
+    @include make-paddings($padding-2xl);
+    @include make-paddings($padding-3xl);
+    @include make-paddings($padding-4xl);
+    @include make-paddings($padding-5xl);
+    @include make-paddings($padding-6xl);
+    @include make-paddings($padding-7xl);
 }
 
 @mixin make-all-class-paddings($class) {
@@ -117,7 +122,12 @@
     @include make-class-paddings($class, $padding-base);
     @include make-class-paddings($class, $padding-lg);
     @include make-class-paddings($class, $padding-xl);
-    @include make-class-paddings($class, $padding-xxl);
+    @include make-class-paddings($class, $padding-2xl);
+    @include make-class-paddings($class, $padding-3xl);
+    @include make-class-paddings($class, $padding-4xl);
+    @include make-class-paddings($class, $padding-5xl);
+    @include make-class-paddings($class, $padding-6xl);
+    @include make-class-paddings($class, $padding-7xl);
 }
 
 @mixin make-all-margins() {
@@ -126,7 +136,12 @@
     @include make-margins($margin-base);
     @include make-margins($margin-lg);
     @include make-margins($margin-xl);
-    @include make-margins($margin-xxl);
+    @include make-margins($margin-2xl);
+    @include make-margins($margin-3xl);
+    @include make-margins($margin-4xl);
+    @include make-margins($margin-5xl);
+    @include make-margins($margin-6xl);
+    @include make-margins($margin-7xl);
 }
 
 @mixin make-all-class-margins($class) {
@@ -135,7 +150,12 @@
     @include make-class-margins($class, $margin-base);
     @include make-class-margins($class, $margin-lg);
     @include make-class-margins($class, $margin-xl);
-    @include make-class-margins($class, $margin-xxl);
+    @include make-class-margins($class, $margin-2xl);
+    @include make-class-margins($class, $margin-3xl);
+    @include make-class-margins($class, $margin-4xl);
+    @include make-class-margins($class, $margin-5xl);
+    @include make-class-margins($class, $margin-6xl);
+    @include make-class-margins($class, $margin-7xl);
 }
 
 @include make-all-paddings();
