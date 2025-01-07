@@ -48,7 +48,7 @@ document.addEventListener(
 
 
 		document.addEventListener('keydown', (ele) => {
-			ele.preventDefault()
+			// ele.preventDefault()
 			switch (ele.keyCode) {
 				case 37: // 向左
 				case 65: // A
