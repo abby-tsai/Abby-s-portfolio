@@ -9,4 +9,4 @@
 雖然我還在摸索js，但我會盡力的！<br>
 希望你還喜歡我的作品集！
 
-使用 Live Sass Compiler 掛件。
+※ 使用 Live Sass Compiler 掛件。
